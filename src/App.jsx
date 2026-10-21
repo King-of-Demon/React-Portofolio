@@ -31,7 +31,7 @@ function App() {
               <i className="ri-download-2-line ri-lg"></i> Download CV
             </a>
             <a
-              href="#"
+              href="#proyek"
               className="bg-[#313244] p-4 rounded-2xl hover:bg-[#3a3b50]"
             >
               <i className="ri-arrow-down-s-line ri-lg"></i> Lihat Proyek
@@ -46,9 +46,14 @@ function App() {
         />
       </div>
 
-      {/* Section Tentang */}
-      <div className="tentang mt-32 my-10">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-[#313244] rounded-xl">
+      {/* Section About */}
+      <div className="tentang mt-32 my-10" id="about">
+        <div
+          className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-[#313244] rounded-xl"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <img
             src={DataImage.HeroImage}
             alt="Image gw"
@@ -87,8 +92,21 @@ function App() {
         </div>
 
         <div className="tools mt-32">
-          <h1 className="text-4xl/snug font-bold mb-4">Tools yang dipake</h1>
-          <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            Tools yang dipake
+          </h1>
+          <p
+            className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-once="true"
+          >
             Berikut ini beberapa tools yang biasa gw pake untuk pembuatan
             Website ataupun Design
           </p>
@@ -97,6 +115,10 @@ function App() {
               <div
                 className="flex items-center gap-2 p-3 border border-[#46485f] rounded-md hover:bg-[#313244] transition-all group"
                 key={tool.id}
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={tool.dad}
+                data-aos-once="true"
               >
                 <img
                   src={tool.gambar}
@@ -113,17 +135,37 @@ function App() {
           </div>
         </div>
       </div>
-      {/* End of Section Tentang */}
+      {/* End of Section About */}
 
       {/* Section Proyek */}
-      <div className="proyek mt-32 py-10">
-        <h1 className="text-center text-4xl font-bold mb-2">Proyek</h1>
-        <p className="text-base/loose text-center opacity-50">
+      <div className="proyek mt-32 py-10" id="proyek">
+        <h1
+          className="text-center text-4xl font-bold mb-2"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Proyek
+        </h1>
+        <p
+          className="text-base/loose text-center opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
           Berikut ini beberapa proyek yang telah saya buat.
         </p>
         <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listProyek.map((proyek) => (
-            <div className="p-4 bg-[#313244] rounded-lg" key={proyek.id}>
+            <div
+              className="p-4 bg-[#313244] rounded-lg"
+              key={proyek.id}
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay={proyek.dad}
+              data-aos-once="true"
+            >
               <img
                 src={proyek.gambar}
                 alt="Image Proyek"
@@ -159,9 +201,22 @@ function App() {
       {/* End of Section Proyek */}
 
       {/* Section Kontak */}
-      <div className="kontak mt-32 sm:p-10 p-0">
-        <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-        <p className="text-base/loose text-center mb-10 opacity-50">
+      <div className="kontak mt-32 sm:p-10 p-0" id="kontak">
+        <h1
+          className="text-4xl mb-2 font-bold text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Kontak
+        </h1>
+        <p
+          className="text-base/loose text-center mb-10 opacity-50"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
           Mari terhubung dengan gw.
         </p>
         <form
@@ -169,6 +224,10 @@ function App() {
           method="POST"
           className="bg-[#313244] p-10 xl:w-fit w-full mx-auto rounded-lg"
           autoComplete="off"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="500"
+          data-aos-once="true"
         >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
